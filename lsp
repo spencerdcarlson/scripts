@@ -1,4 +1,20 @@
 #!/usr/bin/perl
+=begin DESCRIPTION
+	written by Spencer Carlson. Simple script to imitate ls -l but print out file permissions in octal representation
+
+	Installation:
+		$ chmod 0755 lsp 
+		$ mv lsp  /usr/local/bin
+
+	Usage: 
+		lsp <file_name>			prints out info of a file
+		lsp <dir_name>			prints out info of a directory
+
+	Note:
+		* is not accepted
+			$ lsp ~/Desktop/*	Only grabs one file on the desktop and prints out its info  
+=cut
+
 use File::stat;
 use Cwd;
 
